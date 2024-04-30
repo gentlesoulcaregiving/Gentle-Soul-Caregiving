@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-{% macro nav_bar() %}
-<nav class="navbar">
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/css/homepage.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100">
+    <nav class="navbar">
   <div class="logo">Gentle Soul Caregiving</div>
   <ul class="nav-links">
     <li><a href="/" class="nav-link">Home</a></li>
@@ -60,14 +65,6 @@
     }
   }
 </style>
-{% endmacro %}
-<html lang="en">
-  <head>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="/static/css/homepage.css" rel="stylesheet">
-  </head>
-  <body class="bg-gray-100">
-    {% import 'partials/_header.html' as header %}
     {{ header.nav_bar() }}
     <div class="container mx-auto mt-8 min-h-screen text-center">
       <div class="p-5 border-2 border-gray-300 mx-auto">
