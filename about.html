@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Gentle Soul Caregiving</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100">
+    {% macro nav_bar() %}
+    <nav class="bg-gray-800 p-4">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="text-white font-bold text-lg">Gentle Soul Caregiving</div>
+          <div class="flex gap-4">
+            <a href="/" class="text-white hover:text-sky-500 transition-colors">Home</a>
+            <a href="/about" class="text-white hover:text-sky-500 transition-colors">About Us</a>
+            <a href="/services" class="text-white hover:text-sky-500 transition-colors">Services</a>
+            <a href="/contact" class="text-white hover:text-sky-500 transition-colors">Contact</a>
+            <a href="/pricing" class="text-white hover:text-sky-500 transition-colors">Pricing</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    {% endmacro %}
+    {{ nav_bar() }}
+    <div class="container mx-auto mt-8 min-h-screen">
+      <h1 class="text-xl font-bold text-sky-500">About Us</h1>
+      <p>At Gentle Soul Caregiving, we are dedicated to providing exceptional care and support to seniors and individuals with disabilities. Our team of compassionate and experienced caregivers is committed to delivering personalized care that meets the unique needs of each client.</p>
+      <h2 class="text-lg font-bold mt-4">Our History</h2>
+      <p>Gentle Soul Caregiving was founded by Tanya McDonald, a dedicated and experienced caregiver who saw a need for high-quality, personalized care in her community. With a passion for helping others, Tanya built a team of like-minded individuals who share her commitment to delivering exceptional care.</p>
+      <h2 class="text-lg font-bold mt-4">Our Mission and Values</h2>
+      <p>Our mission is to provide compassionate and personalized care that enhances the quality of life for our clients. We value:</p>
+      <ul class="list-disc list-inside">
+        <li>Compassion and empathy</li>
+        <li>Personalized care</li>
+        <li>Trust and integrity</li>
+        <li>Quality and excellence</li>
+        <li>Customer satisfaction</li>
+      </ul>
+      <h2 class="text-lg font-bold mt-4">Credentials and Certifications</h2>
+      <p>Licensed by the state of [State]</p>
+      <p>Certified by the [Certifying Organization]</p>
+      <p>Member of the [Industry Association]</p>
+      <h2 class="text-lg font-bold mt-4">Quality Care and Customer Satisfaction</h2>
+      <p>At Gentle Soul Caregiving, we are committed to delivering exceptional care and exceeding our clients' expectations. We strive for excellence in everything we do and continually seek ways to improve our services.</p>
+      <!-- TODO: Add team images and bios -->
+      <!-- TODO: Add FAQs -->
+    </div>
+    {% include 'partials/_footer.html' %}
+  </body>
+</html>

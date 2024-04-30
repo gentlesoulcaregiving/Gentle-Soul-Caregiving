@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/css/homepage.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100">
+    {% import 'partials/_header.html' as header %}
+    {{ header.nav_bar() }}
+    <div class="container mx-auto mt-8 min-h-screen text-center">
+      <div class="p-5 border-2 border-gray-300 mx-auto">
+        <h1 class="text-3xl font-bold underline">
+        Welcome to Gentle Soul Caregiving
+      </h1>
+      <p class="text-xl mt-4">
+        Your trusted partner in compassionate caregiving, offering personalized care plans to meet your unique needs.
+      </p>
+    </div>
+    <div class="mt-8 p-5 border-2 border-gray-300 mx-auto">
+      <h2 class="text-2xl font-bold underline">What We Offer</h2>
+      <p class="text-lg mt-4">At Gentle Soul Caregiving, we provide a range of services to support your loved ones. Our services include:</p>
+      <ul class="list-disc list-inside mt-4 mx-auto">
+        <li>In-Home Care: Personalized care in the comfort of your own home</li>
+        <li>Assisted Living: Supportive care in a community setting</li>
+        <li>Respite Care: Temporary care for caregivers and loved ones</li>
+      </ul>
+      <div class="mt-4 mx-auto">
+        <a href="/services" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Learn More
+        </a>
+      </div>
+    </div>
+    <div class="mt-8 p-5 border-2 border-gray-300 mx-auto">
+      <h2 class="text-2xl font-bold underline">Why Choose Us</h2>
+      <p class="text-lg mt-4">At Gentle Soul Caregiving, we understand that every individual has unique needs and preferences. That's why we offer:</p>
+      <ul class="list-disc list-inside mt-4 mx-auto">
+        <li>Experienced Caregivers: Our caregivers are trained and experienced in providing compassionate care</li>
+        <li>Personalized Care Plans: We work with you to create a customized care plan that meets your needs</li>
+        <li>Compassionate Approach: Our caregivers are empathetic and understanding, providing care with kindness and respect</li>
+        <li>Flexible Scheduling: We offer flexible scheduling to accommodate your needs and preferences</li>
+        <li>Affordable Pricing: We offer competitive pricing to ensure our services are accessible to all</li>
+      </ul>
+      <p class="mt-4">"Gentle Soul Caregiving has been a blessing for our family. Their caregivers are kind, compassionate, and professional." - John D.</p>
+    </div>
+    <div class="mt-8 p-5 border-2 border-gray-300 mx-auto">
+      <h2 class="text-2xl font-bold underline">Meet Tanya</h2>
+      <p class="text-lg mt-4">Hi, I'm Tanya McDonald, the founder and caregiver at Gentle Soul Caregiving. With 18 years of experience in caregiving, I have dedicated my career to providing compassionate and personalized care to individuals in need.</p>
+      <h3 class="text-xl font-bold mt-4">My Experience</h3>
+      <ul class="list-disc list-inside mt-4 mx-auto">
+        <li>18 years of experience in caregiving</li>
+        <li>Certified in CPR, First Aid, and dementia care</li>
+        <li>Trained in hospice care and palliative care</li>
+      </ul>
+      <h3 class="text-xl font-bold mt-4">My Approach</h3>
+      <p class="text-lg mt-4">"I believe that every individual deserves to be treated with kindness, respect, and compassion. I take the time to listen to my clients' needs and tailor my care to meet their unique requirements. I am committed to providing exceptional care and support to my clients and their families."</p>
+    </div>
+    <div class="mt-8 p-5 border-2 border-gray-300 mx-auto">
+      <h2 class="text-2xl font-bold underline">What Our Clients Say</h2>
+      <p class="text-lg mt-4">Don't just take our word for it! Here's what our clients and their families have to say about Gentle Soul Caregiving:</p>
+      <p class="mt-4">"Gentle Soul Caregiving has been a lifesaver for our family. Their caregivers are kind, compassionate, and professional. We couldn't ask for better care for our loved one." - John and Mary, clients</p>
+      <p class="mt-4">"I was struggling to care for my mother on my own, but Gentle Soul Caregiving has taken a huge weight off my shoulders. Their caregivers are wonderful and I trust them completely." - Emily, client</p>
+      <p class="mt-4">"Gentle Soul Caregiving has provided exceptional care for my father. Their caregivers are knowledgeable, patient, and caring. I highly recommend them!" - David, client</p>
+      <p class="mt-4">Rated 5/5 on Google and Yelp!</p>
+    </div>
+   {% include 'partials/_footer.html' %}
+  </body>
+</html>

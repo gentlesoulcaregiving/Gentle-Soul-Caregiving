@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mx-auto mt-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {% for i in range(1, 7) %}
+    <div class="card">
+      <div class="card-content">
+        {% if i == 1 %}
+        <h1 id="title-{{i}}">Caregiving Fact: Supporting Loved Ones</h1>
+       <p id="description-{{i}}">Approximately 53 million Americans provide unpaid care to a loved one with a disability or illness, with women making up 61% of caregivers, dedicating an average of 20 hours per week to essential support.</p>
+       {% elif i == 2 %}
+       <h2 id="title-{{i}}">Caregiving Fact: Economic Impact</h2>
+       <p id="description-{{i}}">Caregiving costs individuals an average of $17,000 per year in out-of-pocket expenses, leading to significant financial burdens.</p>
+       {% elif i == 3 %}
+       <h2 id="title-{{i}}">Caregiving Fact: Mental Health</h2>
+       <p id="description-{{i}}">Nearly 60% of caregivers experience depression, anxiety, or other mental health concerns due to their caregiving responsibilities.</p>
+       {% elif i == 4 %}
+       <h2 id="title-{{i}}">Caregiving Fact: Healthcare Navigation</h2>
+       <p id="description-{{i}}">Caregivers play a crucial role in healthcare navigation, managing medical appointments, medications, and communicating with healthcare professionals.</p>
+       {% elif i == 5 %}
+       <h2 id="title-{{i}}">Caregiving Fact: Time Commitment</h2>
+       <p id="description-{{i}}">Caregivers spend an average of 20 hours per week providing care, equivalent to a part-time job, and often sacrifice their own leisure time and social activities.</p>
+       {% else %}
+       <h2 id="title-{{i}}">Caregiving Fact: Lack of Support</h2>
+       <p id="description-{{i}}">Despite their vital role, many caregivers feel isolated and unsupported, with 45% reporting they have no help or support with caregiving responsibilities.</p>
+       {% endif %}
+     </div>
+   </div>
+   {% endfor %}
+ </div>
+<style>
+  .card {
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  #description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+</style>
+{% endblock %}

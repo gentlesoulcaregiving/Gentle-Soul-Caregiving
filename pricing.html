@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Gentle Soul Caregiving</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100">
+    {% import 'partials/_header.html' as header %}
+    {{ header.nav_bar() }}
+    <div class="container mx-auto mt-8 min-h-screen">
+      <h1 class="text-3xl font-bold text-sky-500 text-center">Gentle Soul Caregiving Pricing</h1>
+      <div class="mt-8">
+        <h2 class="text-2xl font-bold text-center">Service Pricing</h2>
+        <div class="overflow-x-auto mt-6">
+          <table class="min-w-full table-auto text-center shadow-lg bg-white">
+            <thead class="bg-gray-800 text-white">
+              <tr>
+                <th class="px-4 py-2">Service</th>
+                <th class="px-4 py-2">Hourly Rate</th>
+                <th class="px-4 py-2">Daily Rate</th>
+                <th class="px-4 py-2">Weekly Rate</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700">
+              <tr>
+                <td class="border px-4 py-2">Personal Care</td>
+                <td class="border px-4 py-2">$25/hour</td>
+                <td class="border px-4 py-2">$200/day</td>
+                <td class="border px-4 py-2">$1,200/week</td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="border px-4 py-2">Companion Care</td>
+                <td class="border px-4 py-2">$20/hour</td>
+                <td class="border px-4 py-2">$150/day</td>
+                <td class="border px-4 py-2">$900/week</td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">Light Housekeeping</td>
+                <td class="border px-4 py-2">$20/hour</td>
+                <td class="border px-4 py-2">$150/day</td>
+                <td class="border px-4 py-2">$900/week</td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="border px-4 py-2">Meal Preparation</td>
+                <td class="border px-4 py-2">$25/hour</td>
+                <td class="border px-4 py-2">$200/day</td>
+                <td class="border px-4 py-2">$1,200/week</td>
+              </tr>
+              <tr>
+                <td class="border px-4 py-2">Transportation</td>
+                <td class="border px-4 py-2">$30/hour</td>
+                <td class="border px-4 py-2">$250/day</td>
+                <td class="border px-4 py-2">$1,500/week</td>
+              </tr>
+              <tr class="bg-gray-100">
+                <td class="border px-4 py-2">Respite Care</td>
+                <td class="border px-4 py-2">$25/hour</td>
+                <td class="border px-4 py-2">$200/day</td>
+                <td class="border px-4 py-2">$1,200/week</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 class="text-2xl font-bold text-center mt-8">Package Deals</h2>
+        <ul class="list-disc list-inside text-center mt-4">
+          <li>5 hours of personal care per week: $100/week (save $25)</li>
+          <li>10 hours of companion care per week: $180/week (save $40)</li>
+          <li>20 hours of light housekeeping per month: $350/month (save $100)</li>
+        </ul>
+        <h2 class="text-2xl font-bold text-center mt-8">Care Packages</h2>
+        <ul class="list-disc list-inside text-center mt-4">
+          <li>Basic Care Package (1-2 hours/day): $100-$200/week</li>
+          <li>Standard Care Package (2-4 hours/day): $200-$400/week</li>
+          <li>Premium Care Package (4-6 hours/day): $400-$600/week</li>
+        </ul>
+        <h2 class="text-2xl font-bold text-center mt-8">Discounts</h2>
+        <ul class="list-disc list-inside text-center mt-4">
+          <li>10% discount for veterans and their spouses</li>
+          <li>5% discount for referrals</li>
+        </ul>
+        <h2 class="text-2xl font-bold text-center mt-8">Additional Fees</h2>
+        <ul class="list-disc list-inside text-center mt-4">
+          <li>Travel fee (beyond 20 miles): $0.50/mile</li>
+          <li>Overnight care (8 hours): additional $150</li>
+        </ul>
+      </div>
+    </div>
+    {% include 'partials/_footer.html' %}
+  </body>
+</html>
