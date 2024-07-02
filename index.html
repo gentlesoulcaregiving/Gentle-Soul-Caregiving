@@ -2,65 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gentle Soul Caregiving</title>
+    <title>Gentle Soul Caregiving | Professional Elderly Care Services</title>
+    <meta name="description" content="Gentle Soul Caregiving provides professional and compassionate care for elderly individuals. Our experienced caregivers offer personalized services to ensure comfort and well-being.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white text-center p-4">
-        <h1 class="text-4xl">Gentle Soul Caregiving</h1>
-        <p class="text-lg">Caring for Your Loved Ones</p>
+<body class="bg-gray-50 flex flex-col min-h-screen text-gray-800">
+    <header class="bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center p-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-500 opacity-20">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute bottom-0">
+                <path fill="#ffffff" fill-opacity="0.3" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,144C672,117,768,75,864,69.3C960,64,1056,96,1152,106.7C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="relative z-10">
+            <h1 class="text-5xl font-bold mb-2">Gentle Soul Caregiving</h1>
+            <p class="text-2xl italic">Compassionate Care for Your Loved Ones</p>
+        </div>
     </header>
-
-    <nav class="bg-blue-300 p-2">
-        <ul class="flex justify-center">
-            <li class="mr-4"><a href="index.html" class="text-blue-900">Home</a></li>
-            <li class="mr-4"><a href="services.html" class="text-blue-900">Services</a></li>
-            <li class="mr-4"><a href="about.html" class="text-blue-900">About Us</a></li>
-            <li class="mr-4"><a href="pricing.html" class="text-blue-900">Pricing</a></li>
-            <li><a href="contact.html" class="text-blue-900">Contact</a></li>
-        </ul>
+    <nav x-data="{ isOpen: false }" class="bg-blue-500 sticky top-0 z-20 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-white text-lg font-semibold flex items-center">
+                        <i class="fas fa-heart mr-2"></i> GSC
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Home</a>
+                    <a href="services.html" class="text-white hover:text-blue-200 transition duration-300">Services</a>
+                    <a href="about.html" class="text-white hover:text-blue-200 transition duration-300">About Us</a>
+                    <a href="pricing.html" class="text-white hover:text-blue-200 transition duration-300">Pricing</a>
+                    <a href="contact.html" class="text-white hover:text-blue-200 transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="text-white focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div x-show="isOpen" x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 transform scale-90"
+                 x-transition:enter-end="opacity-100 transform scale-100"
+                 x-transition:leave="transition ease-in duration-300"
+                 x-transition:leave-start="opacity-100 transform scale-100"
+                 x-transition:leave-end="opacity-0 transform scale-90"
+                 class="md:hidden">
+                <a href="index.html" class="block py-2 text-white hover:bg-blue-600">Home</a>
+                <a href="services.html" class="block py-2 text-white hover:bg-blue-600">Services</a>
+                <a href="about.html" class="block py-2 text-white hover:bg-blue-600">About Us</a>
+                <a href="pricing.html" class="block py-2 text-white hover:bg-blue-600">Pricing</a>
+                <a href="contact.html" class="block py-2 text-white hover:bg-blue-600">Contact</a>
+            </div>
+        </div>
     </nav>
-
-    <main class="container mx-auto p-4">
-        <section class="p-4">
-            <h2 class="text-2xl font-semibold mb-4">Welcome to Gentle Soul Caregiving</h2>
-            <p class="text-lg">We provide professional and compassionate care for elderly individuals to ensure their well-being and comfort. Our team of dedicated caregivers is committed to providing personalized services tailored to the unique needs of each client.</p>
+    <main class="container mx-auto px-4 py-12 flex-grow">
+        <section class="mb-16 bg-white shadow-lg rounded-lg p-8 transform hover:scale-105 transition duration-300">
+            <h2 class="text-4xl font-semibold mb-6 text-blue-700">Welcome to Gentle Soul Caregiving</h2>
+            <p class="text-xl leading-relaxed mb-6">We provide professional and compassionate care for elderly individuals to ensure their well-being and comfort. Our team of dedicated caregivers is committed to providing personalized services tailored to the unique needs of each client.</p>
+            <a href="contact.html" class="inline-block bg-blue-600 text-white py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105">Get Started</a>
         </section>
-
-        <section class="p-4 bg-gray-200">
-            <h2 class="text-2xl font-semibold mb-4">Why Choose Us?</h2>
-            <ul class="list-disc list-inside">
-                <li>Experienced and trained caregivers</li>
-                <li>Comprehensive range of caregiving services</li>
-                <li>Personalized care plans</li>
-                <li>24/7 support and assistance</li>
-                <li>Focus on dignity and respect for individuals</li>
-            </ul>
+        <section class="bg-blue-100 rounded-lg p-8 mb-16">
+            <h2 class="text-4xl font-semibold mb-10 text-blue-700 text-center">Why Choose Us?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <i class="fas fa-user-nurse text-4xl text-blue-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3">Experienced Caregivers</h3>
+                        <p class="text-lg">Our team consists of trained professionals with years of experience in elderly care, ensuring the highest quality of service.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <i class="fas fa-clipboard-list text-4xl text-blue-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3">Personalized Care Plans</h3>
+                        <p class="text-lg">We develop tailored care plans to meet the unique needs of each individual, promoting comfort and independence.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <i class="fas fa-clock text-4xl text-blue-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3">24/7 Support</h3>
+                        <p class="text-lg">Our team is available round the clock to provide assistance and support, giving you peace of mind at all times.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <i class="fas fa-heart text-4xl text-blue-500 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-3">Compassionate Care</h3>
+                        <p class="text-lg">We prioritize dignity and respect in all our interactions, treating each client like family.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <section class="p-4">
-            <h2 class="text-2xl font-semibold mb-4">Testimonials</h2>
-            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <p>"The caregivers at Gentle Soul are amazing! They truly care for my mother and provide not only physical support but emotional support as well."</p>
-                    <p class="text-right">- Sarah H.</p>
+        <section>
+            <h2 class="text-4xl font-semibold mb-10 text-blue-700 text-center">What Our Clients Say</h2>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white p-6 shadow-lg rounded-lg transform hover:scale-105 transition duration-300">
+                    <p class="mb-4 text-lg italic"><i class="fas fa-quote-left text-blue-400 mr-2"></i>The caregivers at Gentle Soul are amazing! They truly care for my mother and provide not only physical support but emotional support as well.</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Sarah H." class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">Sarah H.</p>
+                            <p class="text-sm text-gray-600">Daughter of Client</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <p>"I appreciate the professionalism and kindness of the caregivers. They have made a positive impact on my family and have become like family to us."</p>
-                    <p class="text-right">- John D.</p>
+                <div class="bg-white p-6 shadow-lg rounded-lg transform hover:scale-105 transition duration-300">
+                    <p class="mb-4 text-lg italic"><i class="fas fa-quote-left text-blue-400 mr-2"></i>I appreciate the professionalism and kindness of the caregivers. They have made a positive impact on my family and have become like family to us.</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="John D." class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">John D.</p>
+                            <p class="text-sm text-gray-600">Son of Client</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <p>"Gentle Soul Caregiving has made a difference in the quality of life of our loved ones. Highly recommend their services!"</p>
-                    <p class="text-right">- Emily S.</p>
+                <div class="bg-white p-6 shadow-lg rounded-lg transform hover:scale-105 transition duration-300">
+                    <p class="mb-4 text-lg italic"><i class="fas fa-quote-left text-blue-400 mr-2"></i>Gentle Soul Caregiving has made a difference in the quality of life of our loved ones. Highly recommend their services!</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Emily S." class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">Emily S.</p>
+                            <p class="text-sm text-gray-600">Granddaughter of Client</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="bg-blue-500 text-white text-center p-2 mt-8">
-        <p>&copy; 2024 Gentle Soul Caregiving. All Rights Reserved.</p>
+    <footer class="bg-blue-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Gentle Soul Caregiving</h3>
+                    <p class="mb-4">Providing compassionate care for your loved ones since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-blue-200 transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-blue-200 transition duration-300">Services</a></li>
+                        <li><a href="about.html" class="hover:text-blue-200 transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-200 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+                    <p class="flex items-center mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 123 Care Street, Anytown, USA 12345</p>
+                    <p class="flex items-center mb-2"><i class="fas fa-phone mr-2"></i> (555) 123-4567</p>
+                    <p class="flex items-center mb-2"><i class="fas fa-envelope mr-2"></i> info@gentlesoulcaregiving.com</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-blue-500 text-center">
+                <p>&copy; 2024 Gentle Soul Caregiving. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
