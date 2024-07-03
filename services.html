@@ -5,54 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Gentle Soul Caregiving</title>
+    <meta name="description" content="Discover the range of services offered by Gentle Soul Caregiving to provide quality care for your loved ones.">
+    <meta name="keywords" content="elderly care, caregiving, personal care, companionship, medication management, meal preparation, household chores">
+    <meta property="og:title" content="Our Services - Gentle Soul Caregiving">
+    <meta property="og:description" content="Discover the range of services offered by Gentle Soul Caregiving to provide quality care for your loved ones.">
+    <meta property="og:image" content="path/to/your/image.jpg">
+    <meta property="og:url" content="https://www.gentlesoulcaregiving.com/services.html">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white text-center p-4">
-        <h1 class="text-4xl">Our Services</h1>
-        <p class="text-lg">Providing Quality Care for Your Loved Ones</p>
+<body class="bg-gray-50 flex flex-col min-h-screen text-gray-800">
+    <header class="bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center p-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-500 opacity-20" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute bottom-0">
+                <path fill="#ffffff" fill-opacity="0.3" d="M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,144C672,117,768,75,864,69.3C960,64,1056,96,1152,106.7C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="relative z-10">
+            <h1 class="text-5xl font-bold mb-2">Our Services</h1>
+            <p class="text-2xl italic">Providing Quality Care for Your Loved Ones</p>
+        </div>
     </header>
 
-    <nav class="bg-blue-300 p-2">
-        <ul class="flex justify-center">
-            <li class="mr-4"><a href="index.html" class="text-blue-900">Home</a></li>
-            <li class="mr-4"><a href="services.html" class="text-blue-900">Services</a></li>
-            <li class="mr-4"><a href="about.html" class="text-blue-900">About Us</a></li>
-            <li class="mr-4"><a href="pricing.html" class="text-blue-900">Pricing</a></li>
-            <li><a href="contact.html" class="text-blue-900">Contact</a></li>
-        </ul>
+    <nav x-data="{ isOpen: false }" class="bg-blue-500 sticky top-0 z-20 shadow-md" role="navigation">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-white text-lg font-semibold flex items-center">
+                        <i class="fas fa-heart mr-2"></i> GSC
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-blue-200 transition duration-300">Home</a>
+                    <a href="services.html" class="text-white hover:text-blue-200 transition duration-300">Services</a>
+                    <a href="about.html" class="text-white hover:text-blue-200 transition duration-300">About Us</a>
+                    <a href="pricing.html" class="text-white hover:text-blue-200 transition duration-300">Pricing</a>
+                    <a href="contact.html" class="text-white hover:text-blue-200 transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" class="text-white focus:outline-none" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div x-show="isOpen" x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 transform scale-90"
+                 x-transition:enter-end="opacity-100 transform scale-100"
+                 x-transition:leave="transition ease-in duration-300"
+                 x-transition:leave-start="opacity-100 transform scale-100"
+                 x-transition:leave-end="opacity-0 transform scale-90"
+                 class="md:hidden">
+                <a href="index.html" class="block py-2 text-white hover:bg-blue-600">Home</a>
+                <a href="services.html" class="block py-2 text-white hover:bg-blue-600">Services</a>
+                <a href="about.html" class="block py-2 text-white hover:bg-blue-600">About Us</a>
+                <a href="pricing.html" class="block py-2 text-white hover:bg-blue-600">Pricing</a>
+                <a href="contact.html" class="block py-2 text-white hover:bg-blue-600">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <main class="container mx-auto p-4">
-        <section class="p-4">
-            <h2 class="text-2xl font-semibold mb-4">Our Services</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <h3 class="text-xl font-semibold mb-2">Personal Care Assistance</h3>
-                    <p>Assistance with activities of daily living, medication reminders, and personal hygiene support.</p>
+    <main class="container mx-auto px-4 py-12 flex-grow">
+        <section class="p-8 bg-white shadow-lg rounded-lg transform hover:scale-105 transition duration-300">
+            <h2 class="text-4xl font-semibold mb-6 text-blue-700">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-3">Personal Care Assistance</h3>
+                    <p class="text-lg">Assistance with activities of daily living, medication reminders, and personal hygiene support.</p>
                 </div>
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <h3 class="text-xl font-semibold mb-2">Companionship Services</h3>
-                    <p>Engaging in conversations, accompanying to appointments, and social outings for companionship.</p>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-3">Companionship Services</h3>
+                    <p class="text-lg">Engaging in conversations, accompanying to appointments, and social outings for companionship.</p>
                 </div>
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <h3 class="text-xl font-semibold mb-2">Medication Management</h3>
-                    <p>Organizing medications, reminding of dosage schedules, and ensuring proper intake.</p>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-3">Medication Management</h3>
+                    <p class="text-lg">Organizing medications, reminding of dosage schedules, and ensuring proper intake.</p>
                 </div>
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <h3 class="text-xl font-semibold mb-2">Meal Preparation</h3>
-                    <p>Planning and preparing nutritious meals tailored to dietary needs and preferences.</p>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-3">Meal Preparation</h3>
+                    <p class="text-lg">Planning and preparing nutritious meals tailored to dietary needs and preferences.</p>
                 </div>
-                <div class="bg-white p-4 shadow-md rounded-lg">
-                    <h3 class="text-xl font-semibold mb-2">Household Chores Assistance</h3>
-                    <p>Assistance with light housekeeping, laundry, and organizing living spaces.</p>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-3">Household Chores Assistance</h3>
+                    <p class="text-lg">Assistance with light housekeeping, laundry, and organizing living spaces.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-blue-500 text-white text-center p-2 mt-8">
-        <p>&copy; 2024 Gentle Soul Caregiving. All Rights Reserved.</p>
+    <footer class="bg-blue-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Gentle Soul Caregiving</h3>
+                    <p class="mb-4">Providing compassionate care for your loved ones since 2010.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-blue-200 transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-blue-200 transition duration-300">Services</a></li>
+                        <li><a href="about.html" class="hover:text-blue-200 transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-200 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+                    <p class="flex items-center mb-2"><i class="fas fa-map-marker-alt mr-2"></i> PO Box 304, Belleville, WI 53508</p>
+                    <p class="flex items-center mb-2"><i class="fas fa-phone mr-2"></i> (608) 636-4420</p>
+                    <p class="flex items-center mb-2"><i class="fas fa-envelope mr-2"></i> gentlesoulcaregiving@gmail.com</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-blue-500 text-center">
+                <p>&copy; 2024 Gentle Soul Caregiving. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
