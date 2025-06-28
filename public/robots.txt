@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://gentle-soul-caregiving.com
+
+# Sitemaps
+Sitemap: https://gentle-soul-caregiving.com/sitemap.xml
